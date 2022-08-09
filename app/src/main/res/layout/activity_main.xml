@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16sp">
+
+
+        <EditText
+            android:id="@+id/hasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Hasil Dari Kalkulator" />
+
+        <Button
+            android:id="@+id/tambah"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/hasil"
+            android:layout_marginTop="12dp"
+            android:text="+"
+            android:background="@color/purple_700"
+            tools:ignore="InvalidId" />
+
+        <Button
+            android:id="@+id/kurang"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/hasil"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/tambah"
+            android:layout_marginTop="12dp"
+            android:text="-"
+            android:background="@color/purple_700"
+            tools:ignore="InvalidId" />
+
+        <Button
+            android:id="@+id/kali"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/hasil"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/kurang"
+            android:layout_marginTop="12dp"
+            android:text="x"
+            android:background="@color/purple_700"
+            tools:ignore="InvalidId" />
+
+        <Button
+            android:id="@+id/bagi"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/hasil"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/kali"
+            android:layout_marginTop="12dp"
+            android:text=":"
+            android:background="@color/purple_700" />
+
+        <Button
+            android:id="@+id/samadengan"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/hasil"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/bagi"
+            android:layout_marginTop="12dp"
+            android:text="="
+            android:background="@color/purple_700" />
+
+        <Button
+            android:id="@+id/tujuh"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tambah"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/teal_200"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/delapan"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/kurang"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tujuh"
+            android:background="@color/teal_200"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/sembilan"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/bagi"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/delapan"
+            android:background="@color/teal_200"
+            android:text="9" />
+
+<!--        ke dua -->
+        <Button
+            android:id="@+id/empat"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tujuh"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/teal_200"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/lima"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/delapan"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal_200"
+            android:layout_toRightOf="@id/empat"
+            android:layout_marginLeft="32dp"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/enam"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/sembilan"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal_200"
+            android:layout_toRightOf="@id/lima"
+            android:layout_marginLeft="32dp"
+            android:text="6" />
+<!-- tiga -->
+        <Button
+            android:id="@+id/tiga"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/empat"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/teal_200"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/dua"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/lima"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal_200"
+            android:layout_toRightOf="@id/tiga"
+            android:layout_marginLeft="32dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/satu"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/enam"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal_200"
+            android:layout_toRightOf="@id/dua"
+            android:layout_marginLeft="32dp"
+            android:text="1" />
+
+<!--        empat-->
+        <Button
+            android:id="@+id/enol"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/dua"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal_200"
+            android:layout_marginLeft="120dp"
+            android:text="0" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
