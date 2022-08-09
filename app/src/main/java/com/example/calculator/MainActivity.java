@@ -3,6 +3,7 @@ package com.example.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
         buttonBagi = (Button) findViewById(R.id.bagi);
         buttonSamaDengan = (Button) findViewById(R.id.samadengan);
         hasil = (EditText) findViewById(R.id.hasil);
+        process = (EditText) findViewById(R.id.process);
 
         // sembilan
         buttonSembilan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "9");
                 hasil.setText(hasil.getText() + "9");
             }
         });
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDelapan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "8");
                 hasil.setText(hasil.getText() + "8");
             }
         });
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         buttonTujuh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "7");
                 hasil.setText(hasil.getText() + "7");
             }
         });
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         buttonEnam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "6");
                 hasil.setText(hasil.getText() + "6");
             }
         });
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         buttonLima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "5");
                 hasil.setText(hasil.getText() + "5");
             }
         });
@@ -82,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         buttonEmpat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "4");
                 hasil.setText(hasil.getText() + "4");
             }
         });
@@ -90,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         buttonTiga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "3");
                 hasil.setText(hasil.getText() + "3");
             }
         });
@@ -98,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "2");
                 hasil.setText(hasil.getText() + "2");
             }
         });
@@ -106,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSatu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                process.setText(process.getText() + "1");
                 hasil.setText(hasil.getText() + "1");
             }
         });
@@ -126,10 +137,13 @@ public class MainActivity extends AppCompatActivity {
 
                 if (hasil == null) {
                     hasil.setText("");
+                    process.setText("");
                 } else {
                     nilaikeSatu= Integer.parseInt(hasil.getText() + "");
                     tambahadditional = true;
+                    process.setText(nilaikeSatu + "+");
                     hasil.setText(null);
+
                 }
             }
         });
@@ -141,9 +155,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if (hasil == null) {
                     hasil.setText("");
+                    process.setText("");
                 } else {
                     nilaikeSatu= Integer.parseInt(hasil.getText() + "");
                     kurangadditional = true;
+                    process.setText(nilaikeSatu + "-");
                     hasil.setText(null);
                 }
             }
@@ -156,9 +172,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if (hasil == null) {
                     hasil.setText("");
+                    process.setText("");
                 } else {
                     nilaikeSatu= Integer.parseInt(hasil.getText() + "");
                     kaliadditional = true;
+                    process.setText(nilaikeSatu + "X");
                     hasil.setText(null);
                 }
             }
@@ -171,9 +189,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if (hasil == null) {
                     hasil.setText("");
+                    process.setText("");
                 } else {
                     nilaikeSatu= Integer.parseInt(hasil.getText() + "");
                     bagiadditional = true;
+                    process.setText(nilaikeSatu + ":");
                     hasil.setText(null);
                 }
             }
